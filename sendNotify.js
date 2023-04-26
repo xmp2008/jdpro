@@ -22,6 +22,14 @@ const exec = require('child_process').exec;
 const $ = new Env();
 const timeout = 15000; //超时时间(单位毫秒)
 console.log("加载sendNotify，当前版本: 20230314");
+// =======================================ntfy通知设置区域==============================================
+//ntfy官方地址 https://ntfy.sh/
+//ntfy_url 填写ntfy地址,如https://push.example.de:8080
+//ntfy_topic 填写ntfy的消息应用topic
+//ntfy_priority 填写推送消息优先级,默认为4
+let NTFY_URL = '';
+let NTFY_TOPIC = '';
+let NTFY_PRIORITY = 4;
 // =======================================go-cqhttp通知设置区域===========================================
 //gobot_url 填写请求地址http://127.0.0.1/send_private_msg
 //gobot_token 填写在go-cqhttp文件设置的访问密钥
